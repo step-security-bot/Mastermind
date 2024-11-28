@@ -1,0 +1,409 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    
+    <meta name="docsearch:name" content="Mastermind" />
+    <meta name="docsearch:package_type" content="" />
+    <meta name="docsearch:release" content="" />
+    <meta name="docsearch:version" content="" />
+    
+      <title>mastermind.validation.models package &mdash; Mastermind  documentation</title>
+    
+    <link rel="canonical" href="mastermind.validation.models" />
+    <link rel="stylesheet" href="_static/bootstrap-icons.css" type="text/css" />
+          <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8e8a900e" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="_static/sphinx-nefertiti-default.min.css?v=b9bf16a8" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="_static/fonts/nunito/stylesheet.css?v=0ed606bc" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="_static/fonts/red-hat-mono/stylesheet.css?v=4eee5046" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="_static/pygments-dark.css?v=589f9147" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="_static/pygments-light.css?v=1620426e" /><!-- add (1) -->
+        <link rel="index" title="Index" href="genindex.html" />
+        <link rel="search" title="Search" href="search.html" />
+        <link rel="top" title="Mastermind  documentation" href="#" />
+    <style>
+      :root {
+        --nftt-body-font-family: "Nunito", var(--nftt-font-sans-serif) !important;
+        --nftt-font-monospace: "Red Hat Mono", var(--nftt-font-family-monospace) !important;
+        --nftt-project-name-font: var(--nftt-body-font-family);
+        --nftt-documentation-font: var(--nftt-body-font-family);
+        --nftt-doc-headers-font: "Georgia", var(--nftt-documentation-font);}
+      h1 *, h2 *, h3 *, h4 *, h5 *, h6 * { font-size: inherit; }
+    </style>
+  </head>
+  <body>
+    <div id="back-to-top-container" class="position-fixed start-50 translate-middle-x">
+      <button id="back-to-top" type="button" class="d-none btn btn-neutral btn-sm shadow px-4" data-bs-toggle="button">Back to top</button>
+    </div>
+    <header id="snftt-nav-bar" class="navbar navbar-expand-xl navbar-dark nftt-navbar flex-column fixed-top">
+      <div class="skip-links container-fluid visually-hidden-focusable overflow-hidden justify-content-start flex-grow-1">
+        <div class="border-bottom mb-2 pb-2 w-100">
+          <a class="d-none d-md-inline-flex p-2 m-1" href="#sidebar-filter">Skip to docs navigation</a>
+          <a class="d-inline-flex p-2 m-1" href="#content">Skip to main content</a>
+        </div>
+      </div>
+      <nav class="container-xxl nftt-gutter flex-wrap flex-xl-nowrap" aria-label="Main navigation">
+        <div class="nftt-navbar-toggler">
+          <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar" aria-label="Toggle documentation navigation">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+          <a href="index.html"
+              
+              class="navbar-brand p-0 me-0 md-lg-2 pe-lg-4"
+          ><span class="brand-text">Mastermind</span></a>
+        
+        
+        <div class="d-flex d-xl-none">
+          <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#nfttSearch" aria-controls="nfttSearch" aria-label="Search">
+            <i class="bi bi-search"></i>
+          </button>
+          <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#nfttNavbar" aria-controls="nfttNavbar" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+        </div>
+        
+<div class="offcanvas-xl offcanvas-end flex-grow-1" tabindex="-1" id="nfttSearch" aria-labelledby="nfttSearchOffcanvasLabel" data-bs-scroll="true">
+  <div class="offcanvas-header px-4 pb-0">
+    <h5 class="offcanvas-title fw-bold" id="nfttSearchOffcanvasLabel">Search the documentation</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#nfttSearch"></button>
+  </div>
+  <div class="offcanvas-body p-4 pt-0 p-xl-0 ps-xl-4">
+    <hr class="d-xl-none text-white-50">
+    <ul class="navbar-nav flex-row align-items-center flex-wrap ms-md-auto">
+      <li class="nav-item col-12 col-xl-auto">
+        <form id="nftt-search-form" action="search.html" method="get">
+          <div class="input-group">
+            <input type="text" name="q" class="form-control search-input" placeholder="Search docs" aria-label="Search" aria-describedby="button-search">
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+            <button class="btn btn-primary" type="submit" id="button-search" aria-label="Search"><i class="bi bi-search"></i></button>
+          </div>
+        </form>
+      </li>
+    </ul>
+  </div>
+</div>
+
+        <div class="offcanvas-xl offcanvas-end" tabindex="-1" id="nfttNavbar" aria-labelledby="nfttNavbarOffcanvasLabel" data-bs-scroll="true">
+          <div class="offcanvas-header px-4 pb-0">
+            <div class="offcanvas-title navbar-brand" id="nfttNavbarOffcanvasLabel"><span class="brand-text">Mastermind</span></div>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#nfttNavbar"></button>
+          </div>
+          <div class="offcanvas-body p-4 pt-0 p-xl-0 px-xl-3">
+            <hr class="d-xl-none text-white-50">
+            <ul class="navbar-nav flex-row align-items-center flex-wrap ms-lg-auto">
+              
+              
+              
+              
+              <!-- colorscheme_dropdown.html -->
+<li class="nav-item dropdown">
+  <a class="nav-link d-flex py-2 px-0 px-xl-2 dropdown-toggle align-items-center" id="snftt-luz" href="#" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" aria-label="Toggle light/dark">
+    <i class="bi bi-circle-half" data-snftt-luz-icon-active></i>
+    <span id="snftt-luz-text" class="d-xl-none ms-2">Toggle light/dark</span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="snftt-luz-text">
+    <li>
+      <h6 class="dropdown-header">Light/dark</h6>
+    </li>
+    <li>
+      <a class="dropdown-item d-flex align-items-center" data-snftt-luz="light" href="#" aria-pressed="false">
+        <span>
+          <i class="bi bi-sun" data-snftt-luz-icon="light"></i>
+        </span>
+        <span class="ms-3">Light</span>
+        <i class="bi bi-check ms-auto"></i>
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-item d-flex align-items-center" data-snftt-luz="dark" href="#" aria-pressed="false">
+        <span>
+          <i class="bi bi-moon-stars" data-snftt-luz-icon="dark"></i>
+        </span>
+        <span class="ms-3">Dark</span>
+        <i class="bi bi-check ms-auto"></i>
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-item current d-flex align-items-center" data-snftt-luz="default" href="#" aria-pressed="false">
+        <span>
+          <i class="bi bi-circle-half" data-snftt-luz-icon="default"></i>
+        </span>
+        <span class="ms-3">Default</span>
+        <i class="bi bi-check ms-auto"></i>
+      </a>
+    </li>
+  </ul>
+</li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+    </header>
+
+    <div class="container-fluid flex-grow-1">
+      <div class="nftt-gutter nftt-page">
+        <aside class="nftt-sidebar ">
+          <div class="nftt-sidebar-content">
+            
+            <div class="title d-none d-xl-block">
+              <i class="bi bi-book"></i>&nbsp;&nbsp;<span>Index</span>
+            </div>
+            <div id="sidebar" tabindex="-1" class="offcanvas-xl offcanvas-start" aria-labelledby="nfttSidebarOffcanvasLabel">
+                <!-- sidebartemplate: "globaltoc.html" --><div class="offcanvas-header border-bottom">
+  <h5 class="offcanvas-title fw-bold" id="nfttSidebarOffcanvasLabel">
+    Table of contents
+  </h5>
+  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#sidebar"></button>
+</div>
+
+<div class="offcanvas-body">
+  <nav class="toc" aria-label="Main menu">
+    <div class="mb-3 p-1 pt-3 pb-4 border-bottom">
+      <input id="sidebar-filter" type="text" name="filter" class="form-control form-control-sm" placeholder="filter" aria-label="filter">
+    </div>
+    
+  </nav>
+  <template data-toggle-item-template>
+    <button class="btn btn-sm btn-link toctree-expand" type="button">
+      <i class="bi bi-caret-right"></i>
+      <span class="visually-hidden">Toggle menu contents</span>
+    </button>
+  </template>
+</div>
+            </div>
+            
+          </div>
+        </aside>
+        <article id="content" class="nftt-content" role="main">
+          <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="index.html">Start</a></li>
+    <li class="breadcrumb-item active" aria-current="page">mastermind.validation.models package</li>
+  </ol>
+</nav>
+    <section id="module-mastermind.validation.models.numeric">
+<span id="mastermind-validation-models-package"></span><h1>mastermind.validation.models package<a class="headerlink" href="#module-mastermind.validation.models.numeric" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="mastermind.validation.models.numeric.MaximumAttempts">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mastermind.validation.models.numeric.</span></span><span class="sig-name descname"><span class="pre">MaximumAttempts</span></span><a class="reference internal" href="_modules/mastermind/validation/models/numeric.html#MaximumAttempts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mastermind.validation.models.numeric.MaximumAttempts" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="mastermind.validation.base.html#mastermind.validation.base.numeric.ConstrainedInteger" title="mastermind.validation.base.numeric.ConstrainedInteger"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConstrainedInteger</span></code></a></p>
+<p>A ConstrainedInteger that validates the maximum number of attempts allowed in the game.</p>
+<p>The maximum number of attempts must be greater than or equal to 1.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="mastermind.validation.models.numeric.NumberOfColors">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mastermind.validation.models.numeric.</span></span><span class="sig-name descname"><span class="pre">NumberOfColors</span></span><a class="reference internal" href="_modules/mastermind/validation/models/numeric.html#NumberOfColors"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mastermind.validation.models.numeric.NumberOfColors" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="mastermind.validation.base.html#mastermind.validation.base.numeric.ConstrainedInteger" title="mastermind.validation.base.numeric.ConstrainedInteger"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConstrainedInteger</span></code></a></p>
+<p>A ConstrainedInteger that validates the number of colors in the game.</p>
+<p>The number of colors must be greater than or equal to 2.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="mastermind.validation.models.numeric.NumberOfDots">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mastermind.validation.models.numeric.</span></span><span class="sig-name descname"><span class="pre">NumberOfDots</span></span><a class="reference internal" href="_modules/mastermind/validation/models/numeric.html#NumberOfDots"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mastermind.validation.models.numeric.NumberOfDots" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="mastermind.validation.base.html#mastermind.validation.base.numeric.ConstrainedInteger" title="mastermind.validation.base.numeric.ConstrainedInteger"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConstrainedInteger</span></code></a></p>
+<p>A ConstrainedInteger that validates the number of dots in the game.</p>
+<p>The number of dots must be greater than or equal to 2.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="mastermind.validation.models.numeric.NumberOfGuessesMade">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mastermind.validation.models.numeric.</span></span><span class="sig-name descname"><span class="pre">NumberOfGuessesMade</span></span><a class="reference internal" href="_modules/mastermind/validation/models/numeric.html#NumberOfGuessesMade"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mastermind.validation.models.numeric.NumberOfGuessesMade" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="mastermind.validation.base.html#mastermind.validation.base.numeric.ConstrainedInteger" title="mastermind.validation.base.numeric.ConstrainedInteger"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConstrainedInteger</span></code></a></p>
+<p>A ConstrainedInteger that validates the number of guesses made in the game.</p>
+<p>The number of guesses must be greater than or equal to 0.</p>
+</dd></dl>
+
+<dl class="py class" id="module-mastermind.validation.models.valid_combination">
+<dt class="sig sig-object py" id="mastermind.validation.models.valid_combination.ValidCombination">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mastermind.validation.models.valid_combination.</span></span><span class="sig-name descname"><span class="pre">ValidCombination</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number_of_dots</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_of_colors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mastermind/validation/models/valid_combination.html#ValidCombination"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mastermind.validation.models.valid_combination.ValidCombination" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="mastermind.validation.base.html#mastermind.validation.base.base.ValidationModel" title="mastermind.validation.base.base.ValidationModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">ValidationModel</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, …]]</p>
+<p>A ValidationModel that validates a combination of dots in a game.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mastermind.validation.models.valid_combination.ValidCombination.n_of_dots">
+<span class="sig-name descname"><span class="pre">n_of_dots</span></span><a class="headerlink" href="#mastermind.validation.models.valid_combination.ValidCombination.n_of_dots" title="Link to this definition">¶</a></dt>
+<dd><p>The number of dots in the combination.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mastermind.validation.models.valid_combination.ValidCombination.n_of_colors">
+<span class="sig-name descname"><span class="pre">n_of_colors</span></span><a class="headerlink" href="#mastermind.validation.models.valid_combination.ValidCombination.n_of_colors" title="Link to this definition">¶</a></dt>
+<dd><p>The number of colors available for the dots.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mastermind.validation.models.valid_combination.ValidCombination.validate_value">
+<span class="sig-name descname"><span class="pre">validate_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/mastermind/validation/models/valid_combination.html#ValidCombination.validate_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mastermind.validation.models.valid_combination.ValidCombination.validate_value" title="Link to this definition">¶</a></dt>
+<dd><p>Validates the given combination and returns the validated combination.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>Any</em>) – The combination to be validated.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The validated combination.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tuple[int, …]</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference internal" href="mastermind.validation.base.html#mastermind.validation.base.exceptions.TypeValidationError" title="mastermind.validation.base.exceptions.TypeValidationError"><strong>TypeValidationError</strong></a> – If the combination is not a tuple or list of integers.</p></li>
+<li><p><a class="reference internal" href="mastermind.validation.base.html#mastermind.validation.base.exceptions.RangeError" title="mastermind.validation.base.exceptions.RangeError"><strong>RangeError</strong></a> – If the combination does not have the correct number of dots or the dot values are not within the valid range.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class" id="module-mastermind.validation.models.valid_feedback">
+<dt class="sig sig-object py" id="mastermind.validation.models.valid_feedback.ValidFeedback">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mastermind.validation.models.valid_feedback.</span></span><span class="sig-name descname"><span class="pre">ValidFeedback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number_of_dots</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mastermind/validation/models/valid_feedback.html#ValidFeedback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mastermind.validation.models.valid_feedback.ValidFeedback" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="mastermind.validation.base.html#mastermind.validation.base.base.ValidationModel" title="mastermind.validation.base.base.ValidationModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">ValidationModel</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]]</p>
+<p>A ValidationModel that validates the feedback for a game.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mastermind.validation.models.valid_feedback.ValidFeedback.number_of_dots">
+<span class="sig-name descname"><span class="pre">number_of_dots</span></span><a class="headerlink" href="#mastermind.validation.models.valid_feedback.ValidFeedback.number_of_dots" title="Link to this definition">¶</a></dt>
+<dd><p>The number of dots in the combination.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mastermind.validation.models.valid_feedback.ValidFeedback.validate_arguments">
+<span class="sig-name descname"><span class="pre">validate_arguments</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/mastermind/validation/models/valid_feedback.html#ValidFeedback.validate_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mastermind.validation.models.valid_feedback.ValidFeedback.validate_arguments" title="Link to this definition">¶</a></dt>
+<dd><p>Validates the arguments used to initialize the ValidFeedback.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="mastermind.validation.base.html#mastermind.validation.base.exceptions.RangeError" title="mastermind.validation.base.exceptions.RangeError"><strong>RangeError</strong></a> – If the number_of_dots parameter is not in valid range.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mastermind.validation.models.valid_feedback.ValidFeedback.validate_value">
+<span class="sig-name descname"><span class="pre">validate_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/mastermind/validation/models/valid_feedback.html#ValidFeedback.validate_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mastermind.validation.models.valid_feedback.ValidFeedback.validate_value" title="Link to this definition">¶</a></dt>
+<dd><p>Validates the given feedback and returns the validated feedback.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>Any</em>) – The feedback to be validated.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The validated feedback.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tuple[int, int]</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference internal" href="mastermind.validation.base.html#mastermind.validation.base.exceptions.InputConversionError" title="mastermind.validation.base.exceptions.InputConversionError"><strong>InputConversionError</strong></a> – If the input cannot be converted a tuple of integers.</p></li>
+<li><p><a class="reference internal" href="mastermind.validation.base.html#mastermind.validation.base.exceptions.TypeValidationError" title="mastermind.validation.base.exceptions.TypeValidationError"><strong>TypeValidationError</strong></a> – If the feedback is not a tuple of two integers.</p></li>
+<li><p><a class="reference internal" href="mastermind.validation.base.html#mastermind.validation.base.exceptions.RangeError" title="mastermind.validation.base.exceptions.RangeError"><strong>RangeError</strong></a> – If the feedback values are not within the valid range.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+</article>
+        <aside class="nftt-toc my-3">
+          
+          <div class="my-sm-1 my-lg-0 ps-xl-3 text-muted">
+            <button class="btn btn-link link-dark p-lg-0 mb-2 mb-lg-0 text-decoration-none nftt-toc-toggle d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents"
+            >On this page <i class="ms-2 bi bi-chevron-expand"></i></button>
+            <div class="title d-none d-lg-block">
+              <i class="bi bi-file-earmark-text"></i>&nbsp;&nbsp;<span class="small">On this page</span>
+            </div>
+            <div class="collapse nftt-toc-collapse" id="tocContents">
+              <nav id="TableOfContents">
+                <ul>
+<li><a class="reference internal" href="#">mastermind.validation.models package</a><ul>
+<li><a class="reference internal" href="#mastermind.validation.models.numeric.MaximumAttempts"><code class="docutils literal notranslate"><span class="pre">MaximumAttempts</span></code></a></li>
+<li><a class="reference internal" href="#mastermind.validation.models.numeric.NumberOfColors"><code class="docutils literal notranslate"><span class="pre">NumberOfColors</span></code></a></li>
+<li><a class="reference internal" href="#mastermind.validation.models.numeric.NumberOfDots"><code class="docutils literal notranslate"><span class="pre">NumberOfDots</span></code></a></li>
+<li><a class="reference internal" href="#mastermind.validation.models.numeric.NumberOfGuessesMade"><code class="docutils literal notranslate"><span class="pre">NumberOfGuessesMade</span></code></a></li>
+<li><a class="reference internal" href="#mastermind.validation.models.valid_combination.ValidCombination"><code class="docutils literal notranslate"><span class="pre">ValidCombination</span></code></a><ul>
+<li><a class="reference internal" href="#mastermind.validation.models.valid_combination.ValidCombination.n_of_dots"><code class="docutils literal notranslate"><span class="pre">ValidCombination.n_of_dots</span></code></a></li>
+<li><a class="reference internal" href="#mastermind.validation.models.valid_combination.ValidCombination.n_of_colors"><code class="docutils literal notranslate"><span class="pre">ValidCombination.n_of_colors</span></code></a></li>
+<li><a class="reference internal" href="#mastermind.validation.models.valid_combination.ValidCombination.validate_value"><code class="docutils literal notranslate"><span class="pre">ValidCombination.validate_value()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#mastermind.validation.models.valid_feedback.ValidFeedback"><code class="docutils literal notranslate"><span class="pre">ValidFeedback</span></code></a><ul>
+<li><a class="reference internal" href="#mastermind.validation.models.valid_feedback.ValidFeedback.number_of_dots"><code class="docutils literal notranslate"><span class="pre">ValidFeedback.number_of_dots</span></code></a></li>
+<li><a class="reference internal" href="#mastermind.validation.models.valid_feedback.ValidFeedback.validate_arguments"><code class="docutils literal notranslate"><span class="pre">ValidFeedback.validate_arguments()</span></code></a></li>
+<li><a class="reference internal" href="#mastermind.validation.models.valid_feedback.ValidFeedback.validate_value"><code class="docutils literal notranslate"><span class="pre">ValidFeedback.validate_value()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </nav>
+            </div>
+          </div>
+          
+        </aside>
+      </div>
+    </div>
+
+    <footer class="nftt-footer">
+      
+<nav id="paginator"></nav>
+
+      <div class="py-5 px-4 px-md-3">
+  <div class="container">
+    
+
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <a class="brand-text d-inline-flex align-items-center mb-2 text-decoration-none" href="/" aria-label="Nefertiti-for-Sphinx">
+          <span class="fs-6 fw-bold">Mastermind</span>
+        </a>
+        
+          <ul class="list-unstyled small text-muted">
+            <li>2024, Flyson Lin</li>
+          </ul>
+        
+        
+        <div class="built-with pt-2">
+          Built with <a href="http://sphinx-doc.org">Sphinx 8.1.3</a> and <a href="https://github.com/danirus/sphinx-nefertiti">Nefertiti 0.5.3</a>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+    </footer>
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/docs-versions.js?v=08b0cbfb"></script>
+    <script src="_static/sphinx-nefertiti.min.js?v=0872986a"></script>
+    <script src="_static/bootstrap.bundle.min.js?v=ff4e7878"></script>
+  </body>
+</html>
